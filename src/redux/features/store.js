@@ -1,8 +1,10 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import numberSlice from '../redux/features/numbers/numberSlice'
+import numberSlice from './numbers/numberSlice'
+import userSlice from './user/userSlice'
 
 const reducer = combineReducers({
-     numbers: numberSlice
+     numbers: numberSlice,
+     users: userSlice
 })
 
 const creatingStore = () => {

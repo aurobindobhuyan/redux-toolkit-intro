@@ -1,5 +1,6 @@
 import React from 'react'
-import NumbersContainer from './NumbersContainer'
+import NumbersContainer from './numbers/NumbersContainer'
+import Users from './user/Users'
 
 const Home = () => {
 
@@ -7,6 +8,7 @@ const Home = () => {
           <>
                <h3>This is from Home Component</h3>
                <NumbersContainer />
+               <Users />
           </>
      )
 }

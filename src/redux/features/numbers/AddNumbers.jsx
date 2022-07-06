@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addNumber } from '../redux/features/numbers/numberSlice'
+import { addNumber } from './numberSlice'
 
 const AddNumbers = () => {
      const [input, setInput] = useState('')

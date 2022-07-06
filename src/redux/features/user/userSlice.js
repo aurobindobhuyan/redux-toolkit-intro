@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import axios from 'axios'
 
 const initialState = {
      loading: false,
@@ -7,18 +8,12 @@ const initialState = {
 }
 
 // Generating pending, fulfilled and rejected action type
-const startGetUsers = createAsyncThunk('user/getUsers', () => {
-     const xhr = new XMLHttpRequest()
-     xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
-     xhr.send()
-     xhr.onload = function () {
-          console.log(xhr)
-          console.log(xhr.responseText)
-          return xhr.responseText
-     }
-     xhr.onerror = function () {
-          console.log(xhr)
-          return xhr.error
+const startGetUsers = createAsyncThunk('user/getUsers', async () => {
+     try {
+          const result = await axios.get('https://jsonplaceholder.typicode.com/users')
+          return result.data
+     } catch (error) {
+          return error.message
      }
 })
 
@@ -31,16 +26,16 @@ const userSlice = createSlice({
           })
           builder.addCase(startGetUsers.fulfilled, (state, action) => {
                state.loading = false
-               state.users = action.payload
-               state.error = ''
+               Array.isArray(action.payload) ? state.users = action.payload : state.users = []
+               Array.isArray(action.payload) ? state.error = '' : state.error = action.payload
           })
           builder.addCase(startGetUsers.rejected, (state, action) => {
                state.loading = false
                state.users = []
-               state.error = action.error
+               state.error = action.error.message
           })
      }
 })
 
 export default userSlice.reducer
-export  { startGetUsers }
+export { startGetUsers }
