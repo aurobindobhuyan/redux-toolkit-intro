@@ -9,32 +9,18 @@ const numberSlice = createSlice({
                return state
           },
           incrementOne: (state, action) => {
-               return state.map(ele => {
-                    if (ele.id === action.payload.id) {
-                         return { ...action.payload, value: action.payload.value + 1 }
-                    } else {
-                         return ele
-                    }
-               })
+               const findOne = state.find(ele => ele.id === action.payload.id)
+               findOne.value = action.payload.value + 1
           },
           decrementOne: (state, action) => {
-               return state.map(ele => {
-                    if (ele.id === action.payload.id) {
-                         return { ...action.payload, value: action.payload.value - 1 }
-                    } else {
-                         return ele
-                    }
-               })
+               const findingObj = state.find(ele => ele.id === action.payload.id)
+               findingObj.value = action.payload.value - 1
           },
           removeOne: (state, action) => {
                return state.filter(ele => ele.id !== action.payload.id)
           },
           addTwo: state => {
-               return state.map(ele => {
-                    return (
-                         { ...ele, value: ele.value + 2 }
-                    )
-               })
+               state.forEach(ele => ele.value = ele.value + 2)
           }
      }
 })
