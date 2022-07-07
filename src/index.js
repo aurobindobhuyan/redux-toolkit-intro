@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { Provider } from 'react-redux'
-import creatingStore from './features/store';
+import creatingStore from './features/store/store';
 
 const store = creatingStore()
 console.log(store.getState())

@@ -1,6 +1,6 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import numberSlice from './numbers/numberSlice'
-import userSlice from './user/userSlice'
+import numberSlice from '../numbers/reducer/numberSlice'
+import userSlice from '../user/reducer/userSlice'
 
 const reducer = combineReducers({
      numbers: numberSlice,

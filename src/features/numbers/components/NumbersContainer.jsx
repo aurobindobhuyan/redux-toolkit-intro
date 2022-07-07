@@ -2,7 +2,7 @@ import React from 'react'
 import AddNumbers from './AddNumbers'
 import ListingNumbers from './ListingNumbers'
 import { useSelector, useDispatch } from 'react-redux'
-import { addNumber, addingTwo } from './numberSlice'
+import { addNumber, addingTwo } from '../reducer/numberSlice'
 
 const NumbersContainer = () => {
      const numbers = useSelector(state => state.numbers)

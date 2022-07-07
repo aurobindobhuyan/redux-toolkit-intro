@@ -1,6 +1,6 @@
 import React from 'react'
-import NumbersContainer from './numbers/NumbersContainer'
-import Users from './user/Users'
+import NumbersContainer from './numbers/components/NumbersContainer'
+import Users from './user/components/Users'
 
 const Home = () => {
 

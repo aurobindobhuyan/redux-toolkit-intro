@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { incrementOne, decrementOne, removeOne } from './numberSlice'
+import { incrementOne, decrementOne, removeOne } from '../reducer/numberSlice'
 
 const ListingNumbers = () => {
      const numbers = useSelector(state => state.numbers)
