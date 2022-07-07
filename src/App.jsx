@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './redux/features/Home'
+import Home from './features/Home'
 
 function App() {
   return (

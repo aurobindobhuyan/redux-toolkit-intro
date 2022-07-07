@@ -18,7 +18,6 @@ const NumbersContainer = () => {
 
      return (
           <>
-               <h3>This is from NumbersContainer</h3>
                <h3>Total numbers - {numbers.length}</h3>
                <div style={{ display: 'flex' }}>
                     <AddNumbers />
