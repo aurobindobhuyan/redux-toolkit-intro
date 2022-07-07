@@ -11,10 +11,10 @@ Which is the advanced way to use redux.
 
 # Features
 ####  User can :-
-    - When the application is loading for the first time. It will make
-      an api call to get users information from jsonplaceholder.
-    - Enter numbers inside an input field and then add that number 
+  - When the application is loading for the first time. It will make
+      an api call to get users information from [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com/).
+  - Enter numbers inside an input field and then add that number 
       into the list.
-    - User can also click on the random number button to add a number.
-    - after adding the numbers he can individually increment, decrement or 
+  - User can also click on the random number button to add a number.
+  - after adding the numbers he can individually increment, decrement or 
       remove any number as he wish.
